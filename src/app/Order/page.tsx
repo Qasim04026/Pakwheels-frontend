@@ -3,7 +3,7 @@ import React from "react";
 
 const geistMono = "'Geist Mono', monospace";
 const geistSans = "'Geist Sans', sans-serif";
-
+//Interface booking props//
 interface BookingProps {
   setOrderPlaced: (value: boolean) => void;
 }
