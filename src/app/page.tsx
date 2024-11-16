@@ -6,7 +6,7 @@ import Feactured from "./Features/page";
 import Booking from "./Order/page";
 import ThankYou from "./ThankYou/page";
 
-export default function Home() {
+const Home: React.FC = () => {
   const [orderPlaced, setOrderPlaced] = useState<boolean>(false);
 
   return (
@@ -21,4 +21,6 @@ export default function Home() {
       )}
     </div>
   );
-}
+};
+
+export default Home;
