@@ -1,26 +1,21 @@
-"use client";
-import React, { useState } from 'react';
-import Banner from "./banner/header";
-import HeroSection from "./heroSection/page";
-import Features from "./Features/page";
-import Booking from "./Order/page";
-import ThankYou from "./ThankYou/page";
+import React from "react"
+import banner from "./banner/header"
+import HeroSection from "./heroSection/page"
+import Features from "./Features/page"
+import Booking from "./Order/page"
+import Footer from "./Footer/page"
 
-const Home: React.FC = () => {
-  const [orderPlaced, setOrderPlaced] = useState<boolean>(false);
-
+export default function Home() {
   return (
-    <div>
-      <Banner />
-      <HeroSection />
-      <Features />
-      {!orderPlaced ? (
-        <Booking setOrderPlaced={setOrderPlaced} />
-      ) : (
-        <ThankYou />
-      )}
-    </div>
-  );
-};
 
-export default Home;
+<div>
+  
+  <header/>
+  <HeroSection/>
+  <Features/>
+  <Booking/>
+  <Footer/>
+</div>
+
+  )}
+  
