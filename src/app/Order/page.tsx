@@ -1,22 +1,19 @@
 "use client";
 import React from "react";
 
-const geistMono = "'Geist Mono', monospace";
-const geistSans = "'Geist Sans', sans-serif";
-
 interface BookingProps {
   setOrderPlaced: (value: boolean) => void;
 }
 
-export default function Booking({ setOrderPlaced }: BookingProps) {
+const Booking: React.FC<BookingProps> = ({ setOrderPlaced }) => {
   const handleOrderClick = () => {
     setOrderPlaced(true);
   };
 
   return (
-    <section className="bg-gradient-to-r bg-gray-100 py-10" style={{ fontFamily: geistSans }}>
+    <section className="bg-gradient-to-r bg-gray-100 py-10">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-extrabold mb-6 text-blue-800" style={{ fontFamily: geistSans }}>
+        <h2 className="text-3xl font-extrabold mb-6 text-blue-800">
           Enter Your Detail
         </h2>
         <form className="max-w-md mx-auto">
@@ -26,7 +23,6 @@ export default function Booking({ setOrderPlaced }: BookingProps) {
               placeholder="Your Name"
               className="w-full p-3 border border-gray-600 rounded-md"
               required
-              style={{ fontFamily: geistMono }}
             />
           </div>
           <div className="mb-4">
@@ -35,7 +31,6 @@ export default function Booking({ setOrderPlaced }: BookingProps) {
               placeholder="Your Email"
               className="w-full p-3 border border-gray-600 rounded-md"
               required
-              style={{ fontFamily: geistMono }}
             />
           </div>
           <div className="mb-4">
@@ -44,7 +39,6 @@ export default function Booking({ setOrderPlaced }: BookingProps) {
               placeholder="Card Number"
               className="w-full p-3 border border-gray-600 rounded-md"
               required
-              style={{ fontFamily: geistMono }}
             />
           </div>
           <div className="mb-4">
@@ -53,7 +47,6 @@ export default function Booking({ setOrderPlaced }: BookingProps) {
               placeholder="Address"
               className="w-full p-3 border border-gray-600 rounded-md"
               required
-              style={{ fontFamily: geistMono }}
             />
           </div>
           <div className="mb-4">
@@ -61,7 +54,6 @@ export default function Booking({ setOrderPlaced }: BookingProps) {
               type="button"
               onClick={handleOrderClick}
               className="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-900"
-              style={{ fontFamily: geistSans }}
             >
               Place Your Order
             </button>
@@ -70,4 +62,6 @@ export default function Booking({ setOrderPlaced }: BookingProps) {
       </div>
     </section>
   );
-}
+};
+
+export default Booking;
