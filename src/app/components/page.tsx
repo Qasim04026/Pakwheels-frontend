@@ -19,7 +19,7 @@ export default function Navbar() {
                         <li><Link href="/videos" className="hover:text-red-600 hover:bg-white px-2 py-3 rounded-md text-sm font-medium">Videos</Link></li>
                         <li><Link href="/forms" className="hidden lg:inline hover:text-red-600 hover:bg-white px-2 py-3 rounded-md text-sm font-medium">Forums</Link></li>
                         <li><Link href="/Footer" className="hidden lg:inline hover:text-red-600 hover:bg-white px-2 py-3 rounded-md text-sm font-medium">Contact Us</Link></li>
-                        <li><Link href="/Order" className="hidden lg:inline hover:text-red-600 hover:bg-white px-2 py-3 rounded-md text-sm font-medium">Booking</Link></li>
+                        
                     </ul>
                 </div>
                 <div className="flex flex-col items-end">

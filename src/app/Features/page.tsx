@@ -98,5 +98,4 @@ className="cursor-pointer w-60 items-center h-64"/>
 
     </div>
    )
-  
-}
+  }
