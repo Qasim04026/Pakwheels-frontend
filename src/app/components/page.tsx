@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     return (
@@ -8,7 +9,15 @@ export default function Navbar() {
             <nav className="px-4 flex justify-center items-center flex-row w-full text-white font-medium bg-slate-900">
                 <div className="flex flex-col items-center mb-4 sm:mb-0">
                     <p className="text-white mb-1">Download App Via SMS</p>
-                    <img className="px-3 py-3 h-auto w-56 text-lg sm:text-xl md:text-2xl lg:text-2xl" src="https://wsa1.pakwheels.com/assets/new-pw-logo-white-c4cd16ae34613cc1fa16d7840f34a71e.svg" alt="logo" />
+                    <div className="relative w-56 h-auto">
+                        <Image
+                            src="https://wsa1.pakwheels.com/assets/new-pw-logo-white-c4cd16ae34613cc1fa16d7840f34a71e.svg"
+                            alt="logo"
+                            width={224}
+                            height={100} // Adjust height to maintain aspect ratio
+                            priority
+                        />
+                    </div>
                 </div>
                 <div className="w-full sm:w-auto mb-4 sm:mb-8">
                     <ul className="flex flex-row gap-6">
@@ -19,7 +28,6 @@ export default function Navbar() {
                         <li><Link href="/videos" className="hover:text-red-600 hover:bg-white px-2 py-3 rounded-md text-sm font-medium">Videos</Link></li>
                         <li><Link href="/forms" className="hidden lg:inline hover:text-red-600 hover:bg-white px-2 py-3 rounded-md text-sm font-medium">Forums</Link></li>
                         <li><Link href="/Footer" className="hidden lg:inline hover:text-red-600 hover:bg-white px-2 py-3 rounded-md text-sm font-medium">Contact Us</Link></li>
-                        
                     </ul>
                 </div>
                 <div className="flex flex-col items-end">
